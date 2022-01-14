@@ -18,7 +18,7 @@
 </head>
 <body>
 
-        <a href="admin/"><img src="admin/images/logo.jfif" class="indexLogo" alt="" srcset=""></a>   
+        <a href="admin/"><img src="admin/images/ourLogo.svg" class="indexLogo" alt="" srcset=""></a>   
 
 </body>
 </html>
