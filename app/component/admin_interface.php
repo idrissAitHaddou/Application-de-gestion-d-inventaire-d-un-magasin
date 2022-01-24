@@ -1,3 +1,21 @@
+
+<?php
+
+    require_once '../app/classes/db.php';
+    require_once '../app/classes/admin.php';
+
+    $admin=new Admin();
+    /*
+    *
+    *   get admin
+    * 
+    */
+    $adminInfo=$admin->getAdmin();
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +31,7 @@
 
      <header>
         <img src="images/menu.svg" class="toggle-menu"  width="50" height="50" alt="">
-       <a href="?profile"><img src="images/clientLogo.png" width="50" height="50" alt=""></a>
+       <a href="?profile"><img  src=<?php if(!empty($adminInfo["image"])){ echo "upload/".$adminInfo["image"]; }else{echo "images/clientLogo.png";} ?> width="50" height="50" alt=""></a>
        <img src="images/ourLogo.svg" class="our-logo" width="50" height="50" alt="">
        <button><a href="../app/component/logout.php">Déconnexion</a></button>
      </header>  
@@ -57,45 +75,13 @@
                     }
                 }elseif(isset($_GET["id_pro"])){
                     require '../app/component/update_produit.php';
-                }elseif(isset($_GET["id_delP"])){
-                   echo "<div class='action-produit'>
-                           <h2>Voulez-vous supprimer ce produit ?</h2>
-                           <br><br>
-                           <a href='?produit'><input type='button' value='supprimer' style='background-color:red;'></a>
-                           <a href='?produit'><input type='button' value='annuler' style='background-color:#8833FF;'></a>
-                         </div>";
-                   require '../app/component/produits.php';
-                }elseif(isset($_GET["id_delD"])){
-                    echo "<div class='action-produit'>
-                            <h2>Voulez-vous supprimer cette demande ?</h2>
-                            <br><br>
-                            <a href='?domande'><input type='button' value='supprimer' style='background-color:red;'></a>
-                            <a href='?domande'><input type='button' value='annuler' style='background-color:#8833FF;'></a>
-                          </div>";
-                    require '../app/component/domandes.php';
-                 }elseif(isset($_GET["id_delCl"])){
-                    echo "<div class='action-produit'>
-                            <h2>Voulez-vous supprimer ce client ?</h2>
-                            <br><br>
-                            <a href='?client'><input type='button' value='supprimer' style='background-color:red;'></a>
-                            <a href='?client'><input type='button' value='annuler' style='background-color:#8833FF;'></a>
-                          </div>";
-                    require '../app/component/client.php';
-                 }elseif(isset($_GET["id_delM"])){
-                    echo "<div class='action-produit'>
-                            <h2>Voulez-vous supprimer ce contact ?</h2>
-                            <br><br>
-                            <a href='?contact'><input type='button' value='supprimer' style='background-color:red;'></a>
-                            <a href='?contact'><input type='button' value='annuler' style='background-color:#8833FF;'></a>
-                          </div>";
-                    require '../app/component/contact.php';
-                 }
+                }
 
             ?>
         </div>
      </div>
 
 
-     <script src="js/adminInterface.js"></script>
+     <script src="js/admin.js"></script>
 </body>
 </html>
