@@ -2,7 +2,7 @@
 
 <div class="content_dashboard">
 
-      <div class="title">Admin / Modifier un produit</div>
+      <div class="title">Admin / Ajouter un produit</div>
       <div class="errorPro"></div>
 
       <form action="" method="post" class="form-ajouter form-ajouterPro">

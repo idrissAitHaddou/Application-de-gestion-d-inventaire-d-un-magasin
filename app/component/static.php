@@ -27,7 +27,7 @@
 </head>
 <body>
      <div class="content_statics">
-         <div class="title">Admin / statistic</div>
+         <div class="title">Admin / statistiques</div>
           <div class="statics">
              <div class="content_statistic">
                 <div><span><?php echo $rowsProduit; ?></span><img src="images/produit.png" alt="" srcset=""></div>

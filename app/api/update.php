@@ -58,7 +58,7 @@
                     $GLOBALS["data"]["image"]=$newNmae;
                     $oldImage=$produit->getProductImage($_POST["id_pro"]);
                    if($produit->updateProduct($GLOBALS["data"])){
-                    echo '<div  style="color:white;text-align:center;background-color:green;padding:10px;"> Votre informations bien enregistrée</div>';
+                    echo '<div  style="color:white;text-align:center;background-color:#5CDB6F;padding:10px;"> Votre informations bien enregistrée</div>';
                        if(!empty($oldImage["image"])){unlink('../../admin/upload/'.$oldImage["image"]);}
                    }else{
                        echo '<div  style="color:white;text-align:center;background-color:#F55347;padding:10px;">Veuillez réessayer votre modification</div>';
@@ -72,7 +72,7 @@
             }else{
                 $GLOBALS["data"]["image"]="";
                 if($produit->updateProduct($GLOBALS["data"])){
-                    echo '<div  style="color:white;text-align:center;background-color:green;padding:10px;"> Votre informations bien enregistrée</div>';
+                    echo '<div  style="color:white;text-align:center;background-color:#5CDB6F;padding:10px;"> Votre informations bien enregistrée</div>';
 
                 }else{
                     echo '<div  style="color:white;text-align:center;background-color:#F55347;padding:10px;">Veuillez réessayer votre modification</div>';
@@ -185,7 +185,7 @@
                  $GLOBALS["data"]["image"]=$newNmae;
                  $oldImage=$admin->getAdmin();
                 if($admin->updateAdminInfo($GLOBALS["data"])){
-                 echo '<div  style="color:white;text-align:center;background-color:green;padding:10px;">Votre informations bien enregistrée</div>';
+                 echo '<div  style="color:white;text-align:center;background-color:#5CDB6F;padding:10px;">Votre informations bien enregistrée</div>';
                     if(!empty($oldImage["image"])){unlink('../../admin/upload/'.$oldImage["image"]);}
                 }else{
                     echo '<div  style="color:white;text-align:center;background-color:#F55347;padding:10px;">Veuillez réessayer votre modification</div>';
@@ -199,7 +199,7 @@
          }else{
              $GLOBALS["data"]["image"]="";
              if($admin->updateAdminInfo($GLOBALS["data"])){
-                 echo '<div  style="color:white;text-align:center;background-color:green;padding:10px;">Votre informations bien enregistrée</div>';
+                 echo '<div  style="color:white;text-align:center;background-color:#5CDB6F;padding:10px;">Votre informations bien enregistrée</div>';
 
              }else{
                  echo '<div  style="color:white;text-align:center;background-color:#F55347;padding:10px;">Veuillez réessayer votre modification</div>';
@@ -260,7 +260,7 @@
              if(move_uploaded_file($file,$fileUpload)){
                 $GLOBALS["data"]["image"]=$newNmae;
                 if($produit->addProduct($GLOBALS["data"])){
-                 echo '<div  style="color:white;text-align:center;background-color:green;padding:10px;">Votre informations bien enregistrée</div>';
+                 echo '<div  style="color:white;text-align:center;background-color:#5CDB6F;padding:10px;">Votre informations bien enregistrée</div>';
                 }else{
                     echo '<div  style="color:white;text-align:center;background-color:#F55347;padding:10px;">Veuillez réessayer votre ajouter</div>';
                 }
@@ -272,7 +272,7 @@
          }else{
              $GLOBALS["data"]["image"]="";
              if($produit->addProduct($GLOBALS["data"])){
-                 echo '<div  style="color:white;text-align:center;background-color:green;padding:10px;">Votre informations bien enregistrée</div>';
+                 echo '<div  style="color:white;text-align:center;background-color:#5CDB6F;padding:10px;">Votre informations bien enregistrée</div>';
 
              }else{
                  echo '<div  style="color:white;text-align:center;background-color:#F55347;padding:10px;">Veuillez réessayer votre ajouter</div>';

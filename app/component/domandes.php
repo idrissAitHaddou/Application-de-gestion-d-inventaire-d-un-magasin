@@ -94,7 +94,7 @@ elseif(!empty($_GET["page"]) && isset($_GET["page"])){
 
 
      <div class="content_dashboard">
-         <div class="title">Admin / Demande</div>
+         <div class="title">Admin / Demandes</div>
  
 
          <div class="searchProduct">

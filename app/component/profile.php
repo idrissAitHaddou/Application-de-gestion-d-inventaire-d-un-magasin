@@ -17,7 +17,7 @@
 
    
 <div class="content_dashboard">
-      <div class="title">Admin / profile</div>
+      <div class="title">Admin / Profile</div>
       <div class="errorPro"></div>
 
      <div style="text-align:center;width:100%;padding:10px;">

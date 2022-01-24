@@ -14,7 +14,7 @@
          echo '<div  style="color:white;background-color:#F55347;width:100%;text-align:center;padding:10px;">Entrer votre email</div>';
          
      }elseif(empty($_POST["password-login"])){
-        echo '<div  style="color:white;background-color:#F55347;width:100%;text-align:center;padding:10px;">Entrer votre mote de pass</div>';
+        echo '<div  style="color:white;background-color:#F55347;width:100%;text-align:center;padding:10px;">Entrer votre mot de passe</div>';
 
     }else{
         if($GLOBALS["admin"]->getAdminLogin($_POST["email-login"],$_POST["password-login"])){
@@ -22,7 +22,7 @@
             echo "sussecc";
         
         }else{
-          echo '<div  style="color:white;background-color:#F55347;width:100%;text-align:center;padding:10px;">Votre information est incorrect</div>';
+          echo '<div  style="color:white;background-color:#F55347;width:100%;text-align:center;padding:10px;">Votre mot de passe ou e-mail non valide</div>';
 
         }
     }

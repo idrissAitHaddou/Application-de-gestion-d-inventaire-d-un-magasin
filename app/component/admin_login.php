@@ -13,7 +13,7 @@
 
     <div class="errorPro"></div>
     <main>
-            <div> <h1 id="title">Bienvenue à gestion de produit</h1> </div>
+            <div> <h1 id="title"> Application de gestion d'inventaire </h1> </div>
            
             <form action="" method="post" class='form-login'>
                 <input type="text" name="actionLogin" hidden value="login">
